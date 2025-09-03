@@ -1,11 +1,5 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-
 import java.util.*;
 import java.io.*;
-
 class FastReader {
     BufferedReader gt;
     StringTokenizer st;
@@ -38,6 +32,9 @@ class FastReader {
     int nextInt() {
         return Integer.parseInt(next());
     }
+    double nextDouble(){
+        return Double.parseDouble(next());
+    }
 
     int[] readIntArray(int n) {
         int[] res = new int[n];
@@ -55,6 +52,15 @@ class FastReader {
         for (int i = 0; i < n; i++)
             res[i] = nextLong();
         return res;
+    }
+    double[] readDoubleArray(int n)
+    {
+        double []d=new double[n];
+        for(int i=0;i<n;i++)
+        {
+            d[i]=nextDouble();
+        }
+        return d;
     }
 
     String[] readStringArray(int n) {
@@ -119,6 +125,6 @@ class FastReader {
         long val=power(a,pow/2,MOD);
         long ans1=((val%MOD)*(val%MOD))%MOD;
         long ans2=((ans1%MOD)*(a%MOD))%MOD;
-       return pow%2==0?ans1:ans2;
+        return pow%2==0?ans1:ans2;
     }
 }
